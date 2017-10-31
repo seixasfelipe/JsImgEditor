@@ -134,6 +134,17 @@ function draw(img) {
         });
         ctx.putImageData(imageData, 0, 0);
     };
+    var thresholding = function(elem) {
+        var value = parseInt(elem.dataset.value);
+        loop(function(i) {
+            var r = data[i];
+            var g = data[i+1];
+            var b = data[i+2];
+            var v = (0.2126*r + 0.7152*g + 0.0722*b >= value) ? 255 : 0;
+            data[i-1] = data[i+1] = data[i+2] = v
+        });
+        ctx.putImageData(imageData, 0, 0);
+    };
     var colorSwitch = function(elem) {
         var beforeValue = document.querySelector('#before').value;
         beforeValue = beforeValue.split(',');
@@ -184,6 +195,9 @@ function draw(img) {
                 break;
             case 'nightlybtn':
                 nightly(elem);
+                break;
+            case 'thresholdingbtn':
+                thresholding(elem);
                 break;
             case 'colorSwitchbtn':
                 colorSwitch(elem);

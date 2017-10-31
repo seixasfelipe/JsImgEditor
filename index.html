@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css">
     </head>
-    
+
     <body class="editBtns">
 
 
@@ -19,14 +19,14 @@
                 <a class="navbar-brand" href="#">Photo Editor</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"> 
+                        <a class="nav-link" href="#">
                             <label for="load_file" class="btn btn-file-upload">
                                 Choose File
                             </label>
                             <input type="file" id="load_file" />
                         </span></a>
                     </li>
-                    
+
                 </ul>
                 <a class="navbar-text" href="#" id="restorebtn"><img src="assets/icons/refresh-button.svg" width="20px" alt="">Reset</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;<button id="downloadbtn" class="btn btn-success float-right">Download</button>
@@ -37,19 +37,19 @@
                 <canvas id="canvas"></canvas>
                 <div class="row align-items-center">
                     <div class="col">
-                        
+
                     </div>
-                    
+
                 </div>
                 <img src="assets/1.png" id="img" style="display:none;" />
-                
+
 
 
                 <!-- <a href="#" id="downloadlink">download</a> -->
 
                 <br/>
-               
-                
+
+
             </div>
             <div class="col-3 sidebar ">
 
@@ -63,8 +63,9 @@
                 <button id="solarisebtn" data-value="20">Solarise</button>
                 <button id="greenrybtn" data-value="10">Greenry</button>
                 <button id="nightlybtn" data-value="5">Nightly</button>
+                <button id="thresholdingbtn" data-value="128">Thresholding</button>
 
-                
+
                 <div class="p-3" style="color:#455257;font-size:18px">Replace Color</div>
 
                 <div class="customForm">
@@ -80,13 +81,13 @@
                         <div class="col-3"></div>
                         <div class="col-9"><button id="colorSwitchbtn">Switch Colors</button></div>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
         </div>
 
-       
+
         <script src="js/filter.js"></script>
     </body>
 </html>
